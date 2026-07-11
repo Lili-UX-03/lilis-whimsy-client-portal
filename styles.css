@@ -219,6 +219,21 @@ input[type="file"] {
   background: #fff;
 }
 
+.confirmation {
+  margin-top: 22px;
+  padding: 16px 14px;
+  border-radius: 12px;
+  background: #fff;
+  border: 1px solid var(--border);
+}
+
+.confirmation label {
+  font-weight: 600;
+  margin-top: 10px;
+  display: block;
+  margin-bottom: 6px;
+}
+
 @media (max-width: 900px) {
   .app-shell {
     grid-template-columns: 1fr;
