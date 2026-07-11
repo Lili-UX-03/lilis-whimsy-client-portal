@@ -27,18 +27,17 @@
 
       <div class="sidebar-card">
         <p class="label">Current Client</p>
-        <h2>Welcome, Client</h2>
-        <p class="muted">Manage your onboarding, tasks, and files in one place.</p>
+        <h2>Welcome</h2>
+        <p class="muted">Manage your onboarding, tasks, and files here.</p>
       </div>
     </aside>
 
     <main class="main-content">
       <header class="topbar">
         <div>
-          <p class="eyebrow">Functional • Minimal • Easy</p>
+          <p class="eyebrow">Functional • Warm • Easy</p>
           <h2>Client Workspace</h2>
         </div>
-        <button class="primary-btn" type="button">New Request</button>
       </header>
 
       <section id="dashboard" class="view active">
@@ -50,26 +49,69 @@
           </div>
           <div class="card">
             <p class="label">Open Tasks</p>
-            <h3>3</h3>
-            <p class="muted">Tasks waiting for review or in progress.</p>
+            <h3>0</h3>
+            <p class="muted">No tasks yet.</p>
           </div>
           <div class="card">
             <p class="label">Files</p>
-            <h3>8</h3>
-            <p class="muted">Documents shared for your service delivery.</p>
+            <h3>0</h3>
+            <p class="muted">No files uploaded yet.</p>
           </div>
         </div>
       </section>
 
       <section id="onboarding" class="view">
         <div class="card">
-          <h3>Client Onboarding</h3>
+          <h3>Short Client Intake Form</h3>
+          <p class="muted">Lili’s Whimsy VA Client Intake Form</p>
+
           <form class="form">
+            <label>Full Name</label>
             <input type="text" placeholder="Full Name" />
+
+            <label>Business Name</label>
             <input type="text" placeholder="Business Name" />
+
+            <label>Email Address</label>
             <input type="email" placeholder="Email Address" />
+
+            <label>Phone Number</label>
+            <input type="text" placeholder="Phone Number" />
+
+            <label>Preferred Contact Method</label>
+            <input type="text" placeholder="Preferred Contact Method" />
+
+            <label>Service Needed</label>
             <input type="text" placeholder="Service Needed" />
-            <textarea rows="4" placeholder="Tell us about your goals and needs"></textarea>
+
+            <label>Short Description of the Task</label>
+            <textarea rows="3" placeholder="Short Description of the Task"></textarea>
+
+            <label>Deadline or Time Frame</label>
+            <input type="text" placeholder="Deadline or Time Frame" />
+
+            <label>Preferred Contact Time</label>
+            <input type="text" placeholder="Preferred Contact Time" />
+
+            <label>Additional Notes</label>
+            <textarea rows="3" placeholder="Additional Notes"></textarea>
+
+            <div class="confirmation">
+              <p><strong>Confirmation</strong></p>
+              <p class="muted">
+                I confirm that the information provided above is accurate and complete.
+              </p>
+
+              <label>Client Name</label>
+              <input type="text" placeholder="Client Name" />
+
+              <label>Signature (Type Your Full Name)</label>
+              <input type="text" placeholder="Type your full name as your signature" />
+
+              <label>Date</label>
+              <input type="text" placeholder="Date" />
+            </div>
+
             <button type="button" class="primary-btn">Submit Onboarding</button>
           </form>
         </div>
@@ -93,9 +135,7 @@
           <p class="muted">Upload brand assets, documents, and references here.</p>
           <input type="file" multiple />
           <div class="file-list">
-            <div class="file-item">Brand Guide.pdf</div>
-            <div class="file-item">Logo Assets.zip</div>
-            <div class="file-item">Service Notes.docx</div>
+            <p class="muted">No files yet.</p>
           </div>
         </div>
       </section>
@@ -104,8 +144,7 @@
         <div class="card">
           <h3>Messages</h3>
           <div class="message-box">
-            <div class="message client">Client: Please review my new task.</div>
-            <div class="message admin">Lili’s Whimsy: Received. I’ll review it today.</div>
+            <p class="muted">No messages yet.</p>
           </div>
           <textarea rows="3" placeholder="Write a message..."></textarea>
           <button type="button" class="primary-btn">Send Message</button>
