@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lili's Whimsy - Admin Dashboard</title>
+  <link rel="stylesheet" href="admin-styles.css" />
+</head>
+<body>
+  <div id="login-container" class="login-container">
+    <div class="login-box">
+      <div class="login-brand">LW</div>
+      <h1>Lili's Whimsy</h1>
+      <p>Admin Dashboard</p>
+      <form id="login-form">
+        <div class="form-group">
+          <label>Password</label>
+          <input type="password" id="password" placeholder="Enter admin password" required />
+          <div class="error-message"></div>
+        </div>
+        <button type="submit" class="login-btn">Login</button>
+      </form>
+    </div>
+  </div>
+
+  <div id="dashboard-container" class="dashboard-container" style="display: none;">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark">LW</div>
+        <div>
+          <h1>Lili's Whimsy</h1>
+          <p>Admin Dashboard</p>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <button class="nav-link active" data-view="clients" type="button">Clients</button>
+        <button class="nav-link" data-view="tasks" type="button">Tasks</button>
+        <button class="nav-link" data-view="messages" type="button">Messages</button>
+        <button class="nav-link" data-view="analytics" type="button">Analytics</button>
+      </nav>
+
+      <div class="sidebar-card">
+        <p class="label">Logged In</p>
+        <h2>Admin</h2>
+        <button class="logout-btn">Logout</button>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <!-- Clients View -->
+      <section id="clients" class="view active">
+        <header class="topbar">
+          <div>
+            <h2>Clients</h2>
+            <p class="muted">Manage all client accounts</p>
+          </div>
+        </header>
+
+        <div class="card">
+          <div class="table-header">
+            <h3>All Clients</h3>
+            <input type="text" id="client-search" placeholder="Search clients..." class="search-input" />
+          </div>
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Business</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Status</th>
+                <th>Joined</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="clients-table-body">
+              <tr>
+                <td colspan="7" class="empty-message">Loading clients...</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Tasks View -->
+      <section id="tasks" class="view">
+        <header class="topbar">
+          <div>
+            <h2>Tasks</h2>
+            <p class="muted">Track all client tasks</p>
+          </div>
+        </header>
+
+        <div class="card">
+          <div class="table-header">
+            <h3>All Tasks</h3>
+            <select id="task-filter" class="filter-select">
+              <option value="">All Tasks</option>
+              <option value="pending">Pending</option>
+              <option value="in-progress">In Progress</option>
+              <option value="completed">Completed</option>
+            </select>
+          </div>
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Title</th>
+                <th>Client</th>
+                <th>Status</th>
+                <th>Due Date</th>
+                <th>Created</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="tasks-table-body">
+              <tr>
+                <td colspan="6" class="empty-message">Loading tasks...</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Messages View -->
+      <section id="messages" class="view">
+        <header class="topbar">
+          <div>
+            <h2>Messages</h2>
+            <p class="muted">Client communications</p>
+          </div>
+        </header>
+
+        <div class="card">
+          <div class="messages-container">
+            <div class="messages-list" id="messages-list">
+              <p class="empty-message">Loading messages...</p>
+            </div>
+            <div class="message-reply">
+              <textarea id="reply-input" placeholder="Type a reply..." rows="3"></textarea>
+              <button class="primary-btn" id="send-reply-btn">Send Reply</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Analytics View -->
+      <section id="analytics" class="view">
+        <header class="topbar">
+          <div>
+            <h2>Analytics</h2>
+            <p class="muted">Business overview</p>
+          </div>
+        </header>
+
+        <div class="grid">
+          <div class="stat-card">
+            <p class="label">Total Clients</p>
+            <h3 id="stat-total-clients">0</h3>
+          </div>
+          <div class="stat-card">
+            <p class="label">Active Tasks</p>
+            <h3 id="stat-active-tasks">0</h3>
+          </div>
+          <div class="stat-card">
+            <p class="label">Completed Tasks</p>
+            <h3 id="stat-completed-tasks">0</h3>
+          </div>
+          <div class="stat-card">
+            <p class="label">Onboarding</p>
+            <h3 id="stat-onboarding">0</h3>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="admin-script.js"></script>
+</body>
+</html>
