@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lili’s Whimsy VA Portal</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark">LW</div>
+        <div>
+          <h1>Lili’s Whimsy</h1>
+          <p>Client Portal</p>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <button class="nav-link active" data-view="dashboard">Dashboard</button>
+        <button class="nav-link" data-view="onboarding">Onboarding</button>
+        <button class="nav-link" data-view="tasks">Tasks</button>
+        <button class="nav-link" data-view="files">Files</button>
+        <button class="nav-link" data-view="messages">Messages</button>
+      </nav>
+
+      <div class="sidebar-card">
+        <p class="label">Current Client</p>
+        <h2>Welcome, Client</h2>
+        <p class="muted">Manage your onboarding, tasks, and files in one place.</p>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Functional • Minimal • Easy</p>
+          <h2>Client Workspace</h2>
+        </div>
+        <button class="primary-btn">New Request</button>
+      </header>
+
+      <section id="dashboard" class="view active">
+        <div class="grid">
+          <div class="card">
+            <p class="label">Status</p>
+            <h3>Onboarding Ready</h3>
+            <p class="muted">Complete your profile and upload your files to begin.</p>
+          </div>
+          <div class="card">
+            <p class="label">Open Tasks</p>
+            <h3>3</h3>
+            <p class="muted">Tasks waiting for review or in progress.</p>
+          </div>
+          <div class="card">
+            <p class="label">Files</p>
+            <h3>8</h3>
+            <p class="muted">Documents shared for your service delivery.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="onboarding" class="view">
+        <div class="card">
+          <h3>Client Onboarding</h3>
+          <form class="form">
+            <input type="text" placeholder="Full Name" />
+            <input type="text" placeholder="Business Name" />
+            <input type="email" placeholder="Email Address" />
+            <input type="text" placeholder="Service Needed" />
+            <textarea rows="4" placeholder="Tell us about your goals and needs"></textarea>
+            <button type="button" class="primary-btn">Submit Onboarding</button>
+          </form>
+        </div>
+      </section>
+
+      <section id="tasks" class="view">
+        <div class="card">
+          <h3>Task Submission</h3>
+          <form class="form">
+            <input type="text" placeholder="Task Title" />
+            <textarea rows="4" placeholder="Describe the task"></textarea>
+            <input type="file" />
+            <button type="button" class="primary-btn">Send Task</button>
+          </form>
+        </div>
+      </section>
+
+      <section id="files" class="view">
+        <div class="card">
+          <h3>File Sharing</h3>
+          <p class="muted">Upload brand assets, documents, and references here.</p>
+          <input type="file" multiple />
+          <div class="file-list">
+            <div class="file-item">Brand Guide.pdf</div>
+            <div class="file-item">Logo Assets.zip</div>
+            <div class="file-item">Service Notes.docx</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="messages" class="view">
+        <div class="card">
+          <h3>Messages</h3>
+          <div class="message-box">
+            <div class="message client">Client: Please review my new task.</div>
+            <div class="message admin">Lili’s Whimsy: Received. I’ll review it today.</div>
+          </div>
+          <textarea rows="3" placeholder="Write a message..."></textarea>
+          <button type="button" class="primary-btn">Send Message</button>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
