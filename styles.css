@@ -117,12 +117,6 @@ body {
   margin-bottom: 6px;
 }
 
-.topbar h2,
-.card h3,
-.sidebar-card h2 {
-  font-weight: 700;
-}
-
 .primary-btn {
   background: var(--sidebar);
   color: #fff;
