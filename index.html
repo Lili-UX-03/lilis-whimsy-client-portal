@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lili’s Whimsy VA Portal</title>
+  <title>Lili's Whimsy VA Portal</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -12,7 +12,7 @@
       <div class="brand">
         <div class="brand-mark">LW</div>
         <div>
-          <h1>Lili’s Whimsy</h1>
+          <h1>Lili's Whimsy</h1>
           <p>Client Portal</p>
         </div>
       </div>
@@ -63,38 +63,69 @@
       <section id="onboarding" class="view">
         <div class="card">
           <h3>Short Client Intake Form</h3>
-          <p class="muted">Lili’s Whimsy VA Client Intake Form</p>
+          <p class="muted">Lili's Whimsy VA Client Intake Form</p>
+          <div class="success-message">✓ Form submitted successfully! We'll be in touch soon.</div>
 
           <form class="form">
-            <label>Full Name</label>
-            <input type="text" placeholder="Full Name" />
+            <div class="form-group">
+              <label>Full Name</label>
+              <input type="text" placeholder="Full Name" />
+              <div class="error-message"></div>
+            </div>
 
-            <label>Business Name</label>
-            <input type="text" placeholder="Business Name" />
+            <div class="form-group">
+              <label>Business Name</label>
+              <input type="text" placeholder="Business Name" />
+              <div class="error-message"></div>
+            </div>
 
-            <label>Email Address</label>
-            <input type="email" placeholder="Email Address" />
+            <div class="form-group">
+              <label>Email Address</label>
+              <input type="email" placeholder="Email Address" />
+              <div class="error-message"></div>
+            </div>
 
-            <label>Phone Number</label>
-            <input type="text" placeholder="Phone Number" />
+            <div class="form-group">
+              <label>Phone Number</label>
+              <input type="text" placeholder="Phone Number" />
+              <div class="error-message"></div>
+            </div>
 
-            <label>Preferred Contact Method</label>
-            <input type="text" placeholder="Preferred Contact Method" />
+            <div class="form-group">
+              <label>Preferred Contact Method</label>
+              <input type="text" placeholder="Preferred Contact Method" />
+              <div class="error-message"></div>
+            </div>
 
-            <label>Service Needed</label>
-            <input type="text" placeholder="Service Needed" />
+            <div class="form-group">
+              <label>Service Needed</label>
+              <input type="text" placeholder="Service Needed" />
+              <div class="error-message"></div>
+            </div>
 
-            <label>Short Description of the Task</label>
-            <textarea rows="3" placeholder="Short Description of the Task"></textarea>
+            <div class="form-group">
+              <label>Short Description of the Task</label>
+              <textarea rows="3" placeholder="Short Description of the Task"></textarea>
+              <div class="error-message"></div>
+            </div>
 
-            <label>Deadline or Time Frame</label>
-            <input type="text" placeholder="Deadline or Time Frame" />
+            <div class="form-group">
+              <label>Deadline or Time Frame</label>
+              <input type="text" placeholder="Deadline or Time Frame" />
+              <div class="error-message"></div>
+            </div>
 
-            <label>Preferred Contact Time</label>
-            <input type="text" placeholder="Preferred Contact Time" />
+            <div class="form-group">
+              <label>Preferred Contact Time</label>
+              <input type="text" placeholder="Preferred Contact Time" />
+              <div class="error-message"></div>
+            </div>
 
-            <label>Additional Notes</label>
-            <textarea rows="3" placeholder="Additional Notes"></textarea>
+            <div class="form-group">
+              <label>Additional Notes</label>
+              <textarea rows="3" placeholder="Additional Notes"></textarea>
+              <div class="error-message"></div>
+            </div>
 
             <div class="confirmation">
               <p><strong>Confirmation</strong></p>
@@ -102,14 +133,23 @@
                 I confirm that the information provided above is accurate and complete.
               </p>
 
-              <label>Client Name</label>
-              <input type="text" placeholder="Client Name" />
+              <div class="form-group">
+                <label>Client Name</label>
+                <input type="text" placeholder="Client Name" />
+                <div class="error-message"></div>
+              </div>
 
-              <label>Signature (Type Your Full Name)</label>
-              <input type="text" placeholder="Type your full name as your signature" />
+              <div class="form-group">
+                <label>Signature (Type Your Full Name)</label>
+                <input type="text" placeholder="Type your full name as your signature" />
+                <div class="error-message"></div>
+              </div>
 
-              <label>Date</label>
-              <input type="text" placeholder="Date" />
+              <div class="form-group">
+                <label>Date</label>
+                <input type="text" placeholder="Date" />
+                <div class="error-message"></div>
+              </div>
             </div>
 
             <button type="button" class="primary-btn">Submit Onboarding</button>
@@ -120,10 +160,27 @@
       <section id="tasks" class="view">
         <div class="card">
           <h3>Task Submission</h3>
+          <div class="success-message">✓ Task submitted successfully!</div>
+
           <form class="form">
-            <input type="text" placeholder="Task Title" />
-            <textarea rows="4" placeholder="Describe the task"></textarea>
-            <input type="file" />
+            <div class="form-group">
+              <label>Task Title</label>
+              <input type="text" placeholder="Task Title" />
+              <div class="error-message"></div>
+            </div>
+
+            <div class="form-group">
+              <label>Description</label>
+              <textarea rows="4" placeholder="Describe the task"></textarea>
+              <div class="error-message"></div>
+            </div>
+
+            <div class="form-group">
+              <label>Attachment</label>
+              <input type="file" />
+              <div class="file-list"></div>
+            </div>
+
             <button type="button" class="primary-btn">Send Task</button>
           </form>
         </div>
